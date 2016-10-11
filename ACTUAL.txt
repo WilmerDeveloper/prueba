@@ -1,0 +1,83 @@
+<?php
+
+
+
+$cod = $_POST['codigo'];
+//$cod = 001;
+$codigo = substr($cod,1,-1);
+//$codigo = 10;
+
+$resultado = mysql_query("SELECT * FROM producto  WHERE num_prod = '$codigo' ");
+
+
+echo '<fieldset>
+				<table class="tbl-registro" width="100%">';
+
+echo '<table class="table table-bordered table-condensed table-hover">';
+				echo'<tr>';
+                      //echo  '<td>'."No".'</td>';
+					  echo  '<td><center>'."Producto".'</center></td>';
+					  echo  '<td><center>'."Código de barras".'</center></td>';
+					  /*echo  '<td>'."Precio".'</td>';
+					  echo  '<td>'."Existencias".'</td>';*/
+                      
+                 echo'</tr>';
+//$d=0;
+while($mostrar = mysql_fetch_array($resultado)){
+	$a= $mostrar["nom_prod"];
+	echo $a;
+	
+	echo '<tr>';
+	
+	echo '<input type="hidden" class="form-control" name="nprod" value='.$mostrar["nom_prod"].'>';
+	?>
+	
+	<td><input type="text" class="form-control" name="prod" maxlength="200" value="<?php echo $a; ?>"></td>
+    
+    <?php
+	echo '<td><input type="text" class="form-control" name="cbar" value='.$mostrar["cod_barras"].'></td>';
+	/*echo '<td><input type="text" name="sub" value='.$mostrar["precio"].'></td>';
+	echo '<td><input type="text" name="sub" value='.$mostrar["stock"].'></td>';*/
+	echo '</tr>';
+}
+
+
+
+				echo'<tr>';
+                     /* echo  '<td>'."No".'</td>';
+					  echo  '<td>'."Producto".'</td>';
+					  echo  '<td>'."Código de barras".'</td>';*/
+					  echo  '<td><center>'."Precio".'</center></td>';
+					  echo  '<td><center>'."Existencias".'</center></td>';
+                      
+                 echo'</tr>';
+//$d=0;
+
+$resultado1 = mysql_query("SELECT * FROM producto  WHERE num_prod = '$codigo' ");
+while($mostrar1 = mysql_fetch_array($resultado1)){
+	
+	
+	echo '<tr>';
+	
+	/*echo '<td>'.$mostrar['num_prod'].'</td>';
+	echo '<td><input type="text" size="20" name="sub" value='.$mostrar["nom_prod"].'></input></td>';
+	echo '<td><input type="text" name="sub" value='.$mostrar["cod_barras"].'></td>';*/
+	echo '<td><input type="text" class="form-control" name="pre" value='.$mostrar1["precio"].'></td>';
+	echo '<td><input type="text" class="form-control" name="stk" value='.$mostrar1["stock"].'></td>';
+	echo '</tr>';
+}
+
+echo '</tr>';
+
+echo '</table>';
+//echo '<input type="text" name="sub" value='.$mostrar["nom_prod"].'></input>';
+
+
+echo'<tr>
+                    
+                 <td colspan="4"><input type="button" id="actProducto1" class="btn btn-success" value="Registrar" /></td>
+                    </tr>
+                    
+                </table>
+                </fieldset>';
+?>

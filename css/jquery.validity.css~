@@ -1,0 +1,220 @@
+﻿/* 
+ * Style used by the label output mode.
+ * Applied to the error labels that get positioned after an input.
+ */
+fieldset{
+        margin:auto; width:600px;
+	overflow:hidden; padding:30px;
+}
+#botones{
+   margin:auto; width:600px;
+	overflow:hidden; padding:30px;
+	border-style:none;
+	border-width:0px;
+}
+h1{
+	margin:10px 0 0 0;
+	font-size:4.5em;
+}
+h2{
+	margin:auto; width:600px;
+	font-size:1.5em;
+	text-align:center;
+	color: #ccc;
+	border-bottom:1px solid #cfe0e9;
+}
+.ds{
+text-decoration:none;
+position:fixed;
+bottom:10px;
+right:10px;
+font-size:9px;
+color:#bbb;	
+}
+
+p{
+   margin:auto; width:600px;
+	overflow:hidden; padding:30px;
+	width: 600px;
+	text-align: center;
+	font-size:10px;
+	border-bottom:1px solid #cfe0e9;
+}
+label{
+	float:left; /* Importante, para la alineación */
+	width:300px; /* ancho del label */
+	font-size:1em;
+	margin:5px 0 15px;
+}
+select{
+	float:left; /* Importante, para la alineación */
+	width:250px; /* ancho del label */
+	font-size:1em;
+	margin:5px 0 15px;
+	
+	}
+ textarea{
+	float:left;/* Importante, para la alineación */
+	width:535px; height:200px;/* Medidas del Input */
+ 	
+ 	}
+input[type="text"]{
+	float:left;/* Importante, para la alineación */
+	width:230px; height:12px;/* Medidas del Input */
+
+}
+input[type="checkbox"]{
+	float:left;/* Importante, para la alineación */
+	margin:0 0 15px 0; 
+	padding:15px;
+}
+
+span{
+	font-size:10px;/* Tamaño más pequeño para las indicaciones */
+	display:block; /* hace que salte de linea */
+}
+#cajac{
+visibility: hidden;
+    position:absolute; 
+    z-index:2; 
+    float:left;/* Importante, para la alineación */
+    right:450px;
+    cursor:none; 
+	}
+/* Personzaliando el botón de registrar */
+#borrar,#enviar{
+	margin:auto;   
+   position:relative; 
+	left:50px;
+	background:#ccc; color:#000;
+}
+/* Hover a nuestro Botón 
+   No funciona en IE6 (Uno de los peores navegadores) */
+#borrar:hover,#enviar:hover{
+	background:#aaa; color:#fff;
+}
+/* Opcional - Bordes Redondeados
+   Solo funciona con Firefox / Safari / Google Chrome */
+
+/* Si usan esto ultimo no validara, porque aun no lo han estanderizado
+   pero funciona a la perfección - salvo con IE (la oveja negra) */
+label.error { 
+    color:#fff; 
+    margin-left:2px;     
+    background-image:url('../images/arrow.gif');
+    background-position:left center;
+    background-repeat:no-repeat;
+    padding:2px;
+    padding-left:18px;
+    -moz-border-radius:4px;
+    -webkit-border-radius: 4px;
+}
+
+div,fieldset,#borrar{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+input,textarea{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin:0 0 10px 0; 
+	padding:10px;
+	color:#ccc;
+	font-size:12px;
+}
+
+/*
+ * Styles used by the modal output mode.
+ * '.validity-modal-msg' is applied to the modal boxes 
+ * and '.validity-modal-msg:hover' is applied to suggest 
+ * to the user that the boxes are clickable.
+ */
+.validity-modal-msg { 
+    position:absolute; 
+    z-index:2; 
+    background-color:#ccc; 
+    border:solid 1px #000; 
+    padding:4px;
+    cursor:pointer; 
+}
+.validity-modal-msg:hover { 
+    background-color:#aaa; 
+}
+
+/*
+ * Styles used by the summary output mode.
+ * '.validity-summary-container' is a container on the page that should contain a UL 
+ * which is the actual summary. The container can hold 
+ * an extra bit of text (or anything really) that explains what the summary is.
+ * '.validity-erroneous' is applied to every input that fails.
+ */
+.validity-summary-container {
+display:none;
+margin:auto; width:400px;
+overflow:hidden; padding:30px;
+color:#111;
+border-style:solid;
+border-color:#ff0000;
+margin-left:2px;
+font-size:12px;
+
+ }
+.validity-summary-output ul { }
+.validity-erroneous { border:solid 2px #ff0000 !important; }
+
+
+
+.validity-tooltip {
+    z-index:1003;
+    
+    cursor:pointer;
+    
+    padding:3px;
+    width:16em;
+    
+    border-width:1px;
+    border-color:#555;
+    border-style:solid;
+    color:#111;
+    
+    position: absolute;
+    background-color:#f56600;
+}
+
+.validity-tooltip:hover {
+    border-color:#333;
+}
+
+.validity-tooltip .validity-tooltip-outer, .validity-tooltip .validity-tooltip-inner {
+    position: absolute; 
+    width:0; 
+    height:0; 
+    border-right-width: 0;
+    background:none;
+    bottom:auto;
+}
+
+.validity-tooltip .validity-tooltip-outer {	
+    border-color:#333;
+    border-style:solid;
+    
+    border-top: 0px solid transparent; 
+    border-bottom: 24px solid transparent;
+    
+    border-right-width:20px;
+    border-right-style:solid;
+    border-right-color:inherit;
+    
+    border-left-width:0px;
+    top:-1px;
+    left:-21px;
+}
+
+.validity-tooltip .validity-tooltip-inner {
+    border-top: 0px solid transparent; 
+    border-bottom: 24px solid transparent;
+    border-right: 20px solid #f56600;
+    border-left-width:0px;
+    top:1px;
+    left:3px;
+}

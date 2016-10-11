@@ -1,0 +1,58 @@
+﻿/* 
+ * Style used by the label output mode.
+ * Applied to the error labels that get positioned after an input.
+ */
+.menudes {
+position: relative;
+overflow: hidden;
+width: 100%;
+margin: 0 auto 10px;
+text-align:center;
+}
+.menudes a {
+display: inline-block;
+width: 20%; /* 100% dividido por el número de elementos */
+box-sizing: border-box;
+padding: 10px 5px;
+color: #000;
+background: #ccc;
+opacity:.5;
+text-decoration: none;
+font-weight:bold;
+text-align: center;
+border-right: 2px solid #fff;
+position:relative;
+z-index:2;
+}
+.menudes a:first-child {
+border-left: 1px solid #fff;
+}
+.marca {
+position: absolute;
+width: 20%;
+height: 38px;
+box-sizing: border-box;
+bottom: 0;
+left: -30%;
+border: 2px solid #990000;
+transition: 0.5s ease-in-out;
+z-index: 18;
+}
+.menudes a:hover ~ .marca {
+margin-left: -1px;
+}
+.menudes a:nth-child(1):hover ~ .marca {
+left: 0%; 
+}
+.menudes a:nth-child(2):hover ~ .marca {
+left: 20%; /* 1/5 del ancho total */
+}
+.menudes a:nth-child(3):hover ~ .marca {
+left: 40%; /* 2/5 del ancho total */
+}
+.menudes a:nth-child(4):hover ~ .marca {
+left: 60%; /* 3/5 del ancho total */
+}
+.menudes a:nth-child(5):hover ~ .marca {
+left: 80%; /* 4/5 del ancho total */
+}

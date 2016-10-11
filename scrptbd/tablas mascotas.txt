@@ -1,0 +1,25 @@
+
+----------TABLA BARRIO--------------------
+create table barrio(
+    cod_barrio varchar (10) NOT NULL PRIMARY KEY,
+    barrio varchar (60) NOT NULL
+    
+    	
+);
+
+
+----------TABLA REGISTRO--------------------
+create table registro(
+    num_reg integer NOT NULL,
+    propietario varchar (60) NOT NULL,
+    cod_barrio varchar (10) NOT NULL,
+    direccion varchar (60) NOT NULL,
+    telefono varchar (60) NOT NULL,
+    caninos INT NOT NULL,
+    felinos INT NOT NULL,
+    castrados INT NOT NULL
+    
+    	
+);
+
+

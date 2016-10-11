@@ -1,0 +1,62 @@
+.formulario{
+	width:250px;
+	
+	
+	}
+
+
+
+section{
+	margin:auto;
+	margin-top:50px;
+	width:700px;
+	padding:20px;
+	border-radius:5px;
+	box-shadow:2px 2px 10px #6F6F6F;
+	
+}
+
+.sectionI{
+	margin:auto;
+	margin-top:50px;
+	width:700px;
+	padding:20px;
+	border-radius:5px;
+	box-shadow:2px 2px 10px #6F6F6F;
+	background:#CCC;
+}
+
+.sectionF{
+	margin:auto;
+	margin-top:50px;
+	width:1200px;
+	padding:20px;
+	border-radius:5px;
+	box-shadow:2px 2px 10px #6F6F6F;
+}
+
+.sectionN{
+	margin:auto;
+	margin-top:50px;
+	width:1400px;
+	padding:20px;
+	border-radius:5px;
+	box-shadow:2px 2px 10px #6F6F6F;
+	
+}
+
+.sectionP{
+	margin:auto;
+	margin-top:50px;
+	width:1000px;
+	padding:20px;
+	border-radius:5px;
+	box-shadow:2px 2px 10px #6F6F6F;
+}
+
+.tbl-registro tr td{
+	padding-right:10px;
+	padding-bottom:10px;
+	text-align:center;
+	
+}
